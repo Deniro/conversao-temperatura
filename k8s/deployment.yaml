@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: gbatelli/conversao-temperatura:v2
+          image: gbatelli/conversao-temperatura:v1
           ports:
           - containerPort: 8080
 
